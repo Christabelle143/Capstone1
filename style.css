@@ -304,8 +304,8 @@ footer {
 }
 
 .footer-img {
-  height: 50px;
-  width: 40px;
+  height: 60px;
+  width: 50px;
 }
 
 .footer-name p {
@@ -313,6 +313,10 @@ footer {
   color: #e43c13;
   font-size: 18px;
   font-weight: 600;
+}
+
+.footer-message{
+  color: #272A31;
 }
 
 .divider {
@@ -333,7 +337,7 @@ footer {
 
 .about-intro::before {
   content: "";
-  background-image: url('images/');
+  background-image: url('images/about.jpg');
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: absolute;
@@ -390,7 +394,7 @@ footer {
 
 .intro-about-desc {
   border: 2px solid rgb(230, 227, 227);
-  background-color: rgb(247, 247, 247);
+  background-color: white;
   position: relative;
   margin: 1rem;
   padding: 1rem;
@@ -594,5 +598,18 @@ footer {
     border: 6px solid #ec5242;
     padding:  0px;
     color: #ec5242;
+  }
+  .partners-section{
+    display: none;
+  }
+  footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 3rem;
+    background-color: #272A31;
+  }
+  .footer-message{
+    color: #fff;
   }
 }
