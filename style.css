@@ -91,12 +91,6 @@ a {
   display: none;
   flex-direction: column;
 }
-.border-line {
-  min-width: 110px;
-  border: 2px solid #ec5242;
-  padding: 2%;
-  color: #ec5242;
-}
 
 #myLinks a {
   color: rgb(68, 68, 68);
@@ -593,11 +587,12 @@ footer {
     display: flex;
     flex-direction: row;
     padding-right: 6rem;
+    margin-top: 10px;
   }
   .border-line {
-   /* min-width: 120px;*/
-    border: 2px solid #ec5242;
-    padding: 2px;
+    min-width: 120px;
+    border: 6px solid #ec5242;
+    padding:  0px;
     color: #ec5242;
   }
 }
