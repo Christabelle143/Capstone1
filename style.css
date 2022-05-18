@@ -1,0 +1,603 @@
+@import url('https://fonts.cdnfonts.com/css/cocogoose');
+@import url('https://fonts.cdnfonts.com/css/Lato');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Lato', sans-serif;
+  
+}
+ul {
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+header {
+  height: 20px;
+  background-color: #272a31;
+  display: none;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+  width: 20%;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #272a31;
+  margin: 6px 0;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*.my-logo {
+  height: 50px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo-img {
+  height: 30px;
+  width: 30px;
+}
+
+.resto-logo-name {
+  margin-bottom: 1px;
+  margin-left: 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #e43c13;
+}*/
+.my-logo{
+  display: none;
+}
+.container {
+  margin-top: 2px;
+  margin-left: 2px;
+}
+
+.nav {
+  justify-content: space-between;
+  padding-top: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 1px 1px 3px #272a31;
+}
+
+#myLinks {
+  display: none;
+  flex-direction: column;
+}
+.border-line {
+  min-width: 110px;
+  border: 2px solid #ec5242;
+  padding: 2%;
+  color: #ec5242;
+}
+
+#myLinks a {
+  color: rgb(68, 68, 68);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(243, 243, 243);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .intro-img {
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+} */
+
+.intro::before {
+  content: "";
+  background-image: url('images/resto.jpg');
+  background-size: 100% 100%;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  opacity: 0.1;
+}
+
+h1 {
+  position: relative;
+  color: #e43c13;
+  line-height: 0.9;
+  font-size: 55px;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.intro-message {
+  position: relative;
+  color: #e43c13;
+  line-height: 1.1;
+  font-size: 35px;
+  padding-left: 1rem;
+}
+
+.intro-text-date {
+  font-size: 30px;
+  font-weight: 800;
+  margin-left: 1rem;
+}
+
+.news-events {
+  background-color: #272a31;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.news-events h2 {
+  color: white;
+}
+
+.line {
+  height: 1px;
+  background-color: #e43c13;
+  width: 50px;
+}
+
+.card-img-top {
+  width: 25%;
+}
+
+.card-body {
+  background-color: #272a31;
+  display: flex;
+  align-items: center;
+}
+
+.card-body p {
+  color: white;
+  font-size: 14px;
+}
+
+.card-body .card-title {
+  color: #e43c13;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.btn-outline-secondary{
+   font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    margin: 10px 48px;
+    padding: 24px;
+    background-color: #ec5242;
+    color: #fff;
+}
+
+.categories-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.partners-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  background-color: #272a31;
+}
+
+.partners-section h2 {
+  color: white;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partner {
+  padding: 1rem;
+  color: #d1d1d1;
+  font-size: 30px;
+}
+
+.partner1 {
+  padding: 1rem;
+  color: 	#ffa500;
+  font-size: 30px;
+}
+
+.partner3 {
+  padding: 1rem;
+  color: #00ff00;
+  font-size: 30px;
+}
+.partner4 {
+  padding: 1rem;
+  color: #ffff00;
+  font-size: 30px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 95%;
+}
+
+.cat-line {
+  height: 2px;
+  background-color: rgb(85, 85, 85);
+  width: 50px;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.cat-text {
+  color: #e43c13;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.cat-content {
+  font-size: 15px;
+}
+
+.cat-img {
+  height: 150px;
+  width: 130px;
+  margin-right: 1rem;
+}
+
+.cat-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#categories {
+  margin-top: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 3rem;
+}
+
+.footer-logo {
+  display: flex;
+  margin-right: 1rem;
+}
+
+.footer-img {
+  height: 50px;
+  width: 40px;
+}
+
+.footer-name p {
+  margin: 1px;
+  color: #e43c13;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.divider {
+  background-color: rgb(211, 211, 211);
+  height: 1px;
+}
+
+/* About us section */
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(247, 247, 247);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.about-intro::before {
+  content: "";
+  background-image: url('images/');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  opacity: 0.1;
+}
+
+.about-started p {
+  margin: 1rem;
+  text-align: center;
+}
+
+.summit p {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.about-intro .contact p {
+  color: black;
+  font-size: 13px;
+}
+
+.intro-about-content {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-about-content h1 {
+  font-size: 40px;
+  position: relative;
+  text-align: center;
+}
+
+.intro-about-desc .footer-logo .footer-img {
+  width: 80%;
+  height: 50%;
+}
+
+.intro-about-desc .footer-logo .footer-name p {
+  font-size: 45px;
+}
+
+.intro-about-content h2 {
+  font-size: 23px;
+  position: relative;
+}
+
+.intro-about-desc {
+  border: 2px solid rgb(230, 227, 227);
+  background-color: rgb(247, 247, 247);
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 550px;
+}
+
+.intro-desc {
+  border: 2px solid white;
+  background-color: rgb(243, 243, 243);
+  position: relative;
+  margin: 1rem;
+  padding: 1rem;
+  max-width: 550px;
+}
+
+.about-intro .contact {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.about-intro .contact span {
+  color: black;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+.about-started {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-logo {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-logo-desc {
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 600px;
+}
+
+.summits {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+
+.summit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  height: 230px;
+  margin: 1rem;
+  background-color: #e43c13;
+  position: relative;
+}
+
+.summit img {
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  position: absolute;
+}
+
+.summit h2 {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* end of about us section */
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    color: white;
+  }
+
+  .nav {
+    padding-top: 1px;
+  }
+
+  .medias {
+    display: flex;
+    align-items: center;
+    float: right;
+    margin-left: auto;
+    padding-right: 6rem;
+  }
+
+  .medias span {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  header p {
+    margin: 1px;
+  }
+
+  .bi {
+    color: white;
+    width: 15px;
+    height: 15px;
+    margin-left: 1rem;
+    float: right;
+  }
+  .my-logo {
+  height: 50px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.logo-img {
+  height: 30px;
+  width: 30px;
+}
+
+.resto-logo-name {
+  margin-bottom: 1px;
+  margin-left: 5px;
+  font-family: sans-serif;
+  font-size: 20px;
+  color: #e43c13;
+}
+
+  .container {
+    display: none;
+  }
+
+  .intro {
+    padding-left: 6rem;
+  }
+
+  h1 {
+    line-height: 0.9;
+    font-size: 65px;
+  }
+
+  .card-img-top {
+    width: 100%;
+  }
+
+  .card-body {
+    flex-direction: column;
+  }
+
+  .card-body p {
+    font-size: 16px;
+  }
+
+  #categories {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .category {
+    align-items: center;
+    margin: 1px;
+    margin-top: 1rem;
+    width: 90%;
+  }
+
+  .cat-img {
+    height: 150px;
+    width: 150px;
+    margin-right: 1rem;
+  }
+
+  .my-logo {
+    width: 50%;
+    padding-left: 4rem;
+  }
+
+  #myLinks {
+    display: flex;
+    flex-direction: row;
+    padding-right: 6rem;
+  }
+  .border-line {
+   /* min-width: 120px;*/
+    border: 2px solid #ec5242;
+    padding: 2px;
+    color: #ec5242;
+  }
+}
