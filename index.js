@@ -1,8 +1,6 @@
 const hamburger = document.getElementById("hamburger");
-//const body = document.getElementById(".main")
 function menu() {
   hamburger.classList.toggle("change");
-  //document.body.classList.toggle('no-scroll');
   const show = document.getElementById("nav-links");
   if (show.style.display === "flex") {
     show.style.display = "none";
@@ -11,7 +9,6 @@ function menu() {
   }
 }
 hamburger.addEventListener("click", menu);
-//body.addEventListener("click", menu);
 const dishes = {
   0: {
     name: 'Ndole',
@@ -94,17 +91,12 @@ window.onload = () => {
   displayDishes();
 };
 
-// get the show speakers button
 const showDishes = document.querySelector('.show-more-dishes');
-// add click event to the show speakers button
 showDishes.addEventListener('click', (e) => {
   e.preventDefault();
   showDishes.remove();
-  // get elements with m-hide class
   const hide = document.querySelectorAll('.m-hide');
-  // loop through the elements with m-hide class
   for (let i = 0; i < hide.length; i += 1) {
-    // remove the class m-hide
     hide[i].classList.remove('m-hide');
   }
 }, false);
