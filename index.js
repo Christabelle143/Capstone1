@@ -1,66 +1,9 @@
-const categories = [
-  {
-    key: 1,
-    img_src: "images/food2.jpg",
-    img_atr: "Ndole",
-    title: "Ndole",
-    description: "necessitatibus tenetur. Ea, numquam cupiditate.",
-    content:
-      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
-  },
-  {
-    key: 2,
-    img_src: "images/food3.jpg",
-    img_atr: "Kokki",
-    title: "Kokki",
-    description: "Lorem ipsum dolossumenda maaceat voluptatem asperiores",
-    content:
-      "repellat iste neque optio earum labore,   necessitatibus. Ea, numquam cupiditate.",
-  },
-  {
-    key: 3,
-    img_src: "images/food4.jpg",
-    img_atr: "Achu",
-    title: "Achu",
-    description: "Pariatur fugiatneque  voes eos illum necessitatibus tenetur.",
-    content: "ipsum dolor sit . Pariatur e optio earum labore, ipsam facilis ",
-  },
-  {
-    key: 4,
-    img_src: "images/food5.jpg",
-    img_atr: "Njama-njama",
-    title: "Njama-njama",
-    description: "Pariatur fugiatneque  voes eos illum necessitatibus tenetur.",
-    content:
-      " dolor sit amet consectetur adipisbore, ipsam facilis assumenda magni",
-  },
-  {
-    key: 5,
-    img_src: "images/food6.jpg",
-    img_atr: "Egusi-pudding",
-    title: "Egusi-pudding",
-    description:
-      "Lorem ipsum dolnsectetur adipisicing elit.giat repellat iste neque optio",
-    content:
-      "voluptatem asperiores eos illum necesnetur. Ea, numquam cupiditate.",
-  },
-  {
-    key: 6,
-    img_src: "images/food9.jpg",
-    img_atr: "Waterfufu-eru",
-    title: "Waterfufu-eru",
-    description:
-      "Lorem ipsum dolnsectetur adipisicing elit.giat repellat iste neque optio",
-    content:
-      "voluptatem asperiores eos illum necesnetur. Ea, numquam cupiditate.",
-  },
-];
 const hamburger = document.getElementById("hamburger");
 //const body = document.getElementById(".main")
 function menu() {
   hamburger.classList.toggle("change");
   //document.body.classList.toggle('no-scroll');
-  const show = document.getElementById("myLinks");
+  const show = document.getElementById("nav-links");
   if (show.style.display === "flex") {
     show.style.display = "none";
   } else {
@@ -69,43 +12,99 @@ function menu() {
 }
 hamburger.addEventListener("click", menu);
 //body.addEventListener("click", menu);
-
-const CategoriesWrap = document.querySelector("#categories");
-const lunchCategories = () => {
-  categories.forEach((element) => {
-    // CREATE PROJECT ITEM
-    const list = document.createElement("li");
-    list.classList.add("category");
-    // CREATE PROJECT IMAGE
-    const catImg = document.createElement("img");
-    catImg.classList.add("cat-img");
-    catImg.src = element.img_src;
-    catImg.alt = element.img_atr;
-    catImg.id = element.key;
-    list.appendChild(catImg);
-    const catbody = document.createElement("div");
-    catbody.classList.add("cat-body");
-    // CREATE PROJECT HEADING
-    const catHead = document.createElement("h2");
-    catHead.classList.add("cat-title");
-    catHead.innerText = element.title;
-    catbody.appendChild(catHead);
-    // CREATE PROJECT DESCRIPTION
-    const catDescription = document.createElement("p");
-    catDescription.classList.add("cat-text");
-    catDescription.innerText = element.description;
-    catbody.appendChild(catDescription);
-    // CREATE PROJECT SMALL LINE
-    const catLine = document.createElement("div");
-    catLine.classList.add("cat-line");
-    catbody.appendChild(catLine);
-    // CREATE PROJECT CONTENT
-    const catContent = document.createElement("p");
-    catContent.classList.add("cat-content");
-    catContent.innerText = element.content;
-    catbody.appendChild(catContent);
-    list.appendChild(catbody);
-    CategoriesWrap.appendChild(list);
-  });
+const dishes = {
+  0: {
+    name: 'Ndole',
+    photo: 'images/food2.jpg',
+    title: 'Ndole',
+    content:'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+    description: 'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+  },
+  1: {
+    name: 'Achu',
+    photo: 'images/food3.jpg',
+    title: 'Achu',
+    content:'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+    description: 'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+  },
+  2: {
+    name: 'Kokki',
+    photo: 'images/food4.jpg',
+    title: 'kokki',
+    content:'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+    description: 'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+  },
+  3: {
+    name: 'Njama-njama',
+    photo: 'images/food5.jpg',
+    title: 'Njama-njama',
+    content:'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+    description: 'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+  },
+  4: {
+    name: 'Egusi-Pudding',
+    photo: 'images/food6.jpg',
+    title: 'Egusi-pudding',
+    content:'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+    description: 'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+  },
+  5: {
+    name: 'Waterfufu-eru',
+    photo: 'images/food9.jpg',
+    title: 'Waterfufu-eru',
+    content:'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+    description: 'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+  },
 };
-lunchCategories();
+
+function displayDishes() {
+  const dishesDiv = document.getElementById('get-dishes');
+  const dishKeys = Object.keys(dishes);
+  let buildHTML = '';
+  for (let i = 0; i < dishKeys.length; i += 1) {
+    const dish = dishes[dishKeys[i]];
+    buildHTML
+      += `
+      <div class="col-12 col-lg-6 col-xl-6 mb-lg-5 mb-xl-5 ${(i > 1) ? 'm-hide' : ''}">
+        <div class="dishes-slider ">
+          <div class="dish-item d-flex">
+            <div class="dish-img me-3">
+              <img class="" src="${dish.photo}" alt="Speaker">
+            </div>
+            <div class="speaker-info">
+              <h3 class="speaker-name fw-bold">
+                <a href="#" class="text-decoration-none">
+                  <span>${dish.name}</span>
+                </a>
+              </h3>
+              <p class="speaker-designation fst-italic orange-text">
+                <span>${dish.title}</span>
+              </p>
+              <p class="speaker-description">${dish.content}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  dishesDiv.innerHTML = buildHTML;
+}
+
+window.onload = () => {
+  displayDishes();
+};
+
+// get the show speakers button
+const showDishes = document.querySelector('.show-more-dishes');
+// add click event to the show speakers button
+showDishes.addEventListener('click', (e) => {
+  e.preventDefault();
+  showDishes.remove();
+  // get elements with m-hide class
+  const hide = document.querySelectorAll('.m-hide');
+  // loop through the elements with m-hide class
+  for (let i = 0; i < hide.length; i += 1) {
+    // remove the class m-hide
+    hide[i].classList.remove('m-hide');
+  }
+}, false);
