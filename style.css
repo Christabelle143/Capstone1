@@ -303,6 +303,12 @@ footer {
   display: none;
 }
 
+.centered-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .dish-item {
   margin-left: 20px;
   padding-top: 30px;
@@ -477,7 +483,7 @@ footer {
     color: white;
   }
 .container1{
-  max-width: 720px;
+  max-width: 100%;
   
 }
   .nav {
@@ -558,16 +564,17 @@ footer {
   }
 
   .my-logo {
-    width: 50%;
+    width: 40%;
     padding-left: 4rem;
   }
 
   #nav-links {
     display: flex;
     flex-direction: row;
-    padding-right: 6rem;
+    padding-right: 3%;
     margin-top: 10px;
   }
+
   .line {
     height: 1px;
     background-color: #e43c13;
@@ -603,6 +610,11 @@ footer {
   .m-hide{
     display: block;
   }
+
+  #get-dishes {
+    margin: 0 13%;
+  }
+
   .dish-item {
     margin-left: 0;
   }
