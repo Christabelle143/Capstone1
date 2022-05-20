@@ -87,8 +87,8 @@ a {
 }
 
 .intro {
-  width: 100%;
   height: 100vh;
+  width: 100%;
   position: relative;
   background-color: rgb(243, 243, 243);
   background-repeat: no-repeat;
@@ -100,7 +100,7 @@ a {
 .intro::before {
   content: "";
   background-image: url("images/resto.jpg");
-  background-size: 100% 100%;
+  background-size: cover;
   position: absolute;
   top: 1px;
   right: 1px;
