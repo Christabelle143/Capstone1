@@ -1,81 +1,85 @@
-const hamburger = document.getElementById('hamburger');
+const hamburger = document.getElementById("hamburger");
+const nav = document.querySelector("nav");
+
 function menu() {
-  hamburger.classList.toggle('change');
-  const show = document.getElementById('nav-links');
-  if (show.style.display === 'flex') {
-    show.style.display = 'none';
+  hamburger.classList.toggle("change");
+  nav.classList.toggle("mobile-menu");
+  const show = document.getElementById("nav-links");
+  show.classList.toggle("d-none");
+  if (show.style.display === "flex") {
+    show.style.display = "flex";
   } else {
-    show.style.display = 'flex';
+    show.style.display = "flex";
   }
 }
-hamburger.addEventListener('click', menu);
+hamburger.addEventListener("click", menu);
 const dishes = {
   0: {
-    name: 'Ndole',
-    photo: 'images/food2.jpg',
-    title: 'Ndole',
+    name: "Ndole",
+    photo: "images/food2.jpg",
+    title: "Ndole",
     content:
-      'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
     description:
-      'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+      "Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.",
   },
   1: {
-    name: 'Achu',
-    photo: 'images/food3.jpg',
-    title: 'Achu',
+    name: "Achu",
+    photo: "images/food3.jpg",
+    title: "Achu",
     content:
-      'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
     description:
-      'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+      "Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.",
   },
   2: {
-    name: 'Kokki',
-    photo: 'images/food4.jpg',
-    title: 'kokki',
+    name: "Kokki",
+    photo: "images/food4.jpg",
+    title: "kokki",
     content:
-      'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
     description:
-      'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+      "Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.",
   },
   3: {
-    name: 'Njama-njama',
-    photo: 'images/food5.jpg',
-    title: 'Njama-njama',
+    name: "Njama-njama",
+    photo: "images/food5.jpg",
+    title: "Njama-njama",
     content:
-      'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
     description:
-      'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+      "Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.",
   },
   4: {
-    name: 'Egusi-Pudding',
-    photo: 'images/food6.jpg',
-    title: 'Egusi-pudding',
+    name: "Egusi-Pudding",
+    photo: "images/food6.jpg",
+    title: "Egusi-pudding",
     content:
-      'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
     description:
-      'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+      "Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.",
   },
   5: {
-    name: 'Waterfufu-eru',
-    photo: 'images/food9.jpg',
-    title: 'Waterfufu-eru',
+    name: "Waterfufu-eru",
+    photo: "images/food9.jpg",
+    title: "Waterfufu-eru",
     content:
-      'sit amet consectetur adipisicing iste neque optio earum labore, ipsam',
+      "sit amet consectetur adipisicing iste neque optio earum labore, ipsam",
     description:
-      'Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.',
+      "Ariel has lived and worked in 7 different countries including Spain, Argentina, USA, and Vietnam and has been coding since he was 12. He previously founded Tourist Eye.",
   },
 };
 
 function displayDishes() {
-  const dishesDiv = document.getElementById('get-dishes');
+  const dishesDiv = document.getElementById("get-dishes");
   const dishKeys = Object.keys(dishes);
-  let buildHTML = '';
+  let buildHTML = "";
   for (let i = 0; i < dishKeys.length; i += 1) {
     const dish = dishes[dishKeys[i]];
     buildHTML += `
       <div class="col-12 col-lg-6 col-xl-6 mb-lg-5 mb-xl-5 ${
-  i > 1 ? 'm-hide' : ''
-}">
+        i > 1 ? "m-hide" : ""
+      }">
         <div class="dishes-slider ">
           <div class="dish-item d-flex">
             <div class="dish-img me-3">
@@ -104,16 +108,16 @@ window.onload = () => {
   displayDishes();
 };
 
-const showDishes = document.querySelector('.show-more-dishes');
+const showDishes = document.querySelector(".show-more-dishes");
 showDishes.addEventListener(
-  'click',
+  "click",
   (e) => {
     e.preventDefault();
     showDishes.remove();
-    const hide = document.querySelectorAll('.m-hide');
+    const hide = document.querySelectorAll(".m-hide");
     for (let i = 0; i < hide.length; i += 1) {
-      hide[i].classList.remove('m-hide');
+      hide[i].classList.remove("m-hide");
     }
   },
-  false,
+  false
 );
