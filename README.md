@@ -48,7 +48,7 @@ To get a local copy up and running follow these simple example steps.
 
 - Open the command prompt in the created directory.
 
-- On the terminal run this command git clone git@github.com:Christabelle143/Capstone1.git.
+- On the terminal run this command git clone **git@github.com:Christabelle143/Capstone1.git**.
 
 - Go to the repository folder using command prompt cd javascript-capstone.
 
